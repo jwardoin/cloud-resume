@@ -5,73 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Ardoin's Cloud Resume</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 
 <body onload="visitorCounter()">
     <header></header>
-    <div class='background'>
-        <div class="title">
+        <section class="title">
             <h1>Jordan Ardoin</h1>
             <span class='jobtitle'>Cloud Engineer</span> 
-        </div>
-
-        <div class="leftcolumn">
-            <h2>SUMMARY</h2>
-            <p>Highly motivated, self-starting cloud engineer with a deep interest in automation. Proven track record of creating and implementing successful solutions for different applications. Looking to bring my abilities to a tech company that will help take my skillset to the next level.</p>
-            <h2>PROJECTS</h2>
-            <h3>Cloud Resume Challenge</h3>
-            <p class='date'>December 2021</p>
-            <p>Built a full stack application to host a resume and display a total visitor counter</p>
-            <ul>
-                <li>Created a static frontend using HTML, CSS, & Javascript, hosted the files using AWS S3, and served the files using AWS Route53 & CloudFront</li>
-                <li>Employed a serverless architecture using AWS Lambda, API Gateway, & DynamoDB as the backend to keep track of visitors and provide the count to the frontend via HTTP GET method</li>
-                <li>Defined the backend infrastucture using Terraform and deployed all frontend and backend assets with a CI/CD pipeline using GitHub Actions</li>
-            </ul>
-            <p id="CounterVisitor"></p>
-            <script src="js/script.js"></script>
-            <p>View the blog post <a href="https://dev.to/jwardoin/my-cloud-resume-challenge-48n1">here</a></p>
-            <!--<h3>DevOps Tasks</h3>
-            <p class='date'>November 2021 - Present<p>
-            <p>Learning to serve applications using automation with self-hosted servers, scripting, configuration managment tools, and containers<p>
-            <ul>
-                <li>Automated the deployment of a LAMP stack application using Vagrant and Bash scripting</li>
-            </ul>
-            -->
-            <h2>WORK EXPERIENCE</h2>
-            <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
-            <p class='date'>September 2015 &ndash; Present</p>
-            <p>Through professional and business skillsets, enabled artists and organizations to meet objectives, produce satisfactory products, and maintain growth</p>
-            <h3>Instructor at Music Academy of Acadiana | Lafayette, LA</h3>
-            <p class='date'>August 2017 &ndash; Present</p>
-            <p>Worked with people of all ages and from a variety of backgrounds to help them develop a strong understanding of the complex, abstract ideas of music and musical performance</p>
-            <h3>Co-Owner at The Rayo Brothers | Lafayette, LA</h3>
-            <p class='date'>July 2013 &ndash; Present</p>
-            <p>One of four owners responsible for the growth and development of a small business. Collaborated with owners and other businesses to create products for positive end-user experiences</p>
-            </div>
-        <div class="rightcolumn">
-            <h2>CONTACT</h2>
-            <p>337.831.0324</p>
-            <p><a href="mailto:jordanwardoin@gmail.com?subject=Let's%20Talk&body=I%20think%20you%20are%20perfect%20for%20the%20job.%20When%20can%20you%20start?">jordanwardoin@gmail.com</a></p>
-            <p><a href="https://www.github.com/jwardoin">github.com/jwardoin</a></p>
-            <p><a href="https://www.linkedin.com/in/jwardoin">linkedin.com/in/jwardoin</a></p>
-            <p><a href="https://www.twitter.com/jwardoin">@jwardoin</a></p>
-            <h2>SKILLS</h2>
-            <p>Linux</p>
-            <p>Bash</p>
-            <p>AWS</p>
-            <p>Terraform</p>
-            <p>GitHub Actions</p>
-            <p>Python</p>
-            <p>HTML/CSS</p>
-            <p>Javascript</p>
-            <h2>CERTIFICATIONS</h2>
-            <p>AWS Solutions Architect &ndash; Associate</p>
-            <h2>EDUCATION</h2>
-            <p class="school">UL LAFAYETTE</p>
-            <p class='date'>2011 &ndash; 2015</p>
-            <p>Major: Political Science</p>
-        </div>       
-</body>
+        </section>
+        <section class="flex">
+            <section class="flex-1">
+                <h2>SUMMARY</h2>
+                <p>Highly motivated, self-starting cloud engineer with a deep interest in automation. Proven track record of creating and implementing successful solutions for different applications. Looking to bring my abilities to a tech company that will help take my skillset to the next level.</p>
+                <h2>PROJECTS</h2>
+                <h3>Cloud Resume Challenge</h3>
+                <p class='date'>December 2021</p>
+                <p>Built a full stack application to host a resume and display a total visitor counter</p>
+                <ul class="marked-list">
+                    <li>Created a static frontend using HTML, CSS, & Javascript, hosted the files using AWS S3, and served the files using AWS Route53 & CloudFront</li>
+                    <li>Employed a serverless architecture using AWS Lambda, API Gateway, & DynamoDB as the backend to keep track of visitors and provide the count to the frontend via HTTP GET method</li>
+                    <li>Defined the backend infrastucture using Terraform and deployed all frontend and backend assets with a CI/CD pipeline using GitHub Actions</li>
+                </ul>
+                <p id="CounterVisitor">Visitor Counter Goes Here</p>
+                <p>View the blog post <a href="https://dev.to/jwardoin/my-cloud-resume-challenge-48n1">here</a></p>
+                <!--<h3>DevOps Tasks</h3>
+                <p class='date'>November 2021 - Present<p>
+                <p>Learning to serve applications using automation with self-hosted servers, scripting, configuration managment tools, and containers<p>
+                <ul>
+                    <li>Automated the deployment of a LAMP stack application using Vagrant and Bash scripting</li>
+                </ul>
+                -->
+                <h2>WORK EXPERIENCE</h2>
+                <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
+                <p class='date'>September 2015 &ndash; Present</p>
+                <p>Through professional and business skillsets, enabled artists and organizations to meet objectives, produce satisfactory products, and maintain growth</p>
+                <h3>Instructor at Music Academy of Acadiana | Lafayette, LA</h3>
+                <p class='date'>August 2017 &ndash; Present</p>
+                <p>Worked with people of all ages and from a variety of backgrounds to help them develop a strong understanding of the complex, abstract ideas of music and musical performance</p>
+                <h3>Co-Owner at The Rayo Brothers | Lafayette, LA</h3>
+                <p class='date'>July 2013 &ndash; Present</p>
+                <p>One of four owners responsible for the growth and development of a small business. Collaborated with owners and other businesses to create products for positive end-user experiences</p>
+            </section>
+            <section class="flex-2">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li>337.831.0324</li>
+                    <li><a href="mailto:jordanwardoin@gmail.com?subject=Let's%20Talk&body=I%20think%20you%20are%20perfect%20for%20the%20job.%20When%20can%20you%20start?">jordanwardoin@gmail.com</a></li>
+                    <li><a href="https://www.github.com/jwardoin">github.com/jwardoin</a></li>
+                    <li><a href="https://www.linkedin.com/in/jwardoin">linkedin.com/in/jwardoin</a></li>
+                    <li><a href="https://www.twitter.com/jwardoin">@jwardoin</a></li>
+                </ul>
+               
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>Linux</li>
+                    <li>Bash</li>
+                    <li>AWS</li>
+                    <li>Terraform</li>
+                    <li>GitHub Actions</li>
+                    <li>Python</li>
+                    <li>HTML/CSS</li>
+                    <li>Javascript</li>
+                </ul>
+                <h2>CERTIFICATIONS</h2>
+                <p>AWS Solutions Architect &ndash; Associate</p>
+                <h2>EDUCATION</h2>
+                <p class="school">UL LAFAYETTE</p>
+                <p class='date'>2011 &ndash; 2015</p>
+                <p>Major: Political Science</p>
+            </section>
+        </section>
+        
+        <!-- <script src="js/script.js"></script>        -->
+    </body>
 </html>

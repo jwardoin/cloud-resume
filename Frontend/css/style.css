@@ -1,67 +1,138 @@
-* {
-    max-width: 800px;
-    margin: auto;
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Styles
+  ========================================
+*/
+
+html {
+    font-size:62.5%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-  }
-
-.title {
-    padding: 10px 0;
-    margin-top: 60px;
 }
 
-.leftcolumn {
-    width: 500px;
-    float: left;
-    padding-bottom: 50px;
+h2, h3, p, li {
+    margin-bottom: 15px;
 }
 
-.rightcolumn {
-    width: 220px;
-    float: right;
-}
-
-h2 {
-    font-size: 19px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 16px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
-p {
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.school {
+h1, h2, h3 {
     font-weight: 600;
 }
 
-.jobtitle {
-    color: blue;
+h1 {
+    font-size: 3rem;
 }
 
-.date {
-    font-size: 12px;
-    color: blue;
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p, li {
+    font-size: 1.4rem;
+}
+
+span {
+    font-size: 1.3rem;
+}
+
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
 }
 
 
-ul {
-    padding-bottom: 10px;
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-li {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-size: 14px; 
+.flex-1 {
+    align-self: flex-start;
+    flex-basis: 60%;
+    margin: 0;
+}
+
+.flex-2 {
+    flex-basis: 30%;
+}
+
+/*
+  ========================================
+  Lists
+  ========================================
+*/
+
+.marked-list {
+    list-style: square outside;
+    margin-left: 2rem;
 }
 
 #CounterVisitor {
     text-align: center;
+}
+
+/*
+  ========================================
+  Layer
+  ========================================
+*/
+
+.date, .jobtitle {
+    color: rgba(30, 30, 200);
+    font-size: 1.2rem;
+}
+
+a:visited {
+    color: #0000EE;
+}
+
+/*
+  ========================================
+  Media Query
+  ========================================
+*/
+
+@media (max-width:801px) and (min-width:1200px) {
+    section {
+        margin: 0 0 0 15px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    section {
+        margin: 0 0 0 15px;
+    }
+    
+    .flex {
+        flex-flow: column wrap;
+        
+    }
 }
