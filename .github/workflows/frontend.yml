@@ -2,10 +2,8 @@ name: Upload Website & Invalidate Cloudfront Distribution
 
 on:
   push:
-    branches:
-    - main
     paths:
-    - './Frontend'
+    - 'Frontend/**'
 
 jobs:
   s3-upload:
