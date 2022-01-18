@@ -5,6 +5,8 @@ client = boto3.client('dynamodb')
 
 def lambda_handler(event, context):
     
+    # Increments the 'amount' of Website Visits by 1 each time code is run
+    
     response = client.update_item(
         TableName='CRC_DB',
         Key={'WebsiteVisits': {'S': 'WebsiteVisits'}},
@@ -13,10 +15,14 @@ def lambda_handler(event, context):
         ExpressionAttributeValues={':increment': {'N': "1"}}              
     )
     
+     # Gets current value of 'amount'
+    
     responsetwo = client.get_item(
         TableName='CRC_DB', 
         Key={'WebsiteVisits': {'S': 'WebsiteVisits'}},
         ProjectionExpression='amount')
+    
+    # Returns current 'amount' to API
     
     return {
         'isBase64Encoded': False,
