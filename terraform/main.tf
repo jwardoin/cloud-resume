@@ -20,9 +20,13 @@ provider "aws" {
 
 }
 
+# Data
+
 data "aws_region" "current" {}
 
 data "aws_caller_identity" "current" {}
+
+# DyanmoDB Table
 
 resource "aws_dynamodb_table" "crc_ddb" {
   name         = "CRC_DB"
@@ -34,6 +38,8 @@ resource "aws_dynamodb_table" "crc_ddb" {
     type = "S"
   }
 }
+
+# Permissions
 
 resource "aws_iam_role" "CRC_Lambda_IAM" {
   name               = "CRC_Lambda_Role"
@@ -73,6 +79,16 @@ resource "aws_iam_role_policy" "lambda_ddb" {
   })
 }
 
+resource "aws_lambda_permission" "allow_api" {
+  statement_id  = "AllowAPIgatewayInvokation"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.crc_lambda.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "arn:aws:execute-api:${data.aws_region.current.id}:${data.aws_caller_identity.current.account_id}:${aws_api_gateway_rest_api.CRC_API.id}/*/*/*"
+}
+
+# Lambda Function
+
 data "aws_s3_bucket_object" "lambda" {
   bucket = "crcterraformtestjwa"
   key    = "lambda.zip"
@@ -87,6 +103,7 @@ resource "aws_lambda_function" "crc_lambda" {
   runtime       = "python3.9"
 }
 
+# API
 
 resource "aws_api_gateway_rest_api" "CRC_API" {
   name = "CRC_API"
@@ -166,6 +183,8 @@ resource "aws_api_gateway_stage" "prod" {
   stage_name    = "prod"
 }
 
+# CORS Enabled API
+
 resource "aws_api_gateway_method" "cors_method" {
   rest_api_id   = aws_api_gateway_rest_api.CRC_API.id
   resource_id   = aws_api_gateway_resource.CRC_API_resource.id
@@ -227,10 +246,3 @@ resource "aws_api_gateway_method_response" "cors_method_response" {
   ]
 }
 
-resource "aws_lambda_permission" "allow_api" {
-  statement_id  = "AllowAPIgatewayInvokation"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.crc_lambda.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "arn:aws:execute-api:${data.aws_region.current.id}:${data.aws_caller_identity.current.account_id}:${aws_api_gateway_rest_api.CRC_API.id}/*/*/*"
-}
