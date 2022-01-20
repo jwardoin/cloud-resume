@@ -16,10 +16,7 @@ jobs:
           zip lambda.zip lambda.py
       - uses: jakejarvis/s3-sync-action@v0.3.1
         with:
-          args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
-            --exclude 'lambda.py'
-            --exclude 'terraform/*' 
-            --exclude 'README.md'
+          args: --acl public-read --follow-symlinks --delete --exclude 'lambda.py'
         env:
           AWS_REGION: 'us-east-1'
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_BACKEND }}
