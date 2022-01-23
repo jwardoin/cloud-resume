@@ -1,6 +1,9 @@
 
 async function visitorCounter() {
-    let n = await fetch('https://o88fs9koy5.execute-api.us-east-1.amazonaws.com/prod/WebsiteVisits');
-    let count = await n.text();
-    document.getElementById('CounterVisitor').innerHTML = "You Are Visitor Number " + count.slice(1, -1) + "!";
+    const url = 'https://o88fs9koy5.execute-api.us-east-1.amazonaws.com/prod/WebsiteVisits';
+    const counter = document.querySelector('#CounterVisitor');
+    
+    const n = await fetch(url);
+    const count = await n.text();
+    counter.innerText = `You Are Visitor Number ${count.slice(1, -1)}!`;
 }
