@@ -6,7 +6,20 @@ on:
     - 'Backend/**'
 
 jobs:
+
+## TODO: Integrate Cypress test into repo
+
+#  cypress-test:
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v2
+
+
   zip-and-s3-upload:
+  # needs: cypress-test # Cypress Test must pass before deploying new code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -23,3 +36,30 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: './Backend'
+
+## TODO: Get Terraform Cloud and original state file working with this repository
+
+#  terraform:
+#    needs: zip-and-s3-upload  
+#    runs-on: ubuntu-latest
+#    defaults:
+#      run: 
+#        working-directory: terraform
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#
+#      - name: Setup Terraform
+#        uses: hashicorp/setup-terraform@v1
+#        with:
+#          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+#
+#      - name: Terraform Format
+#        id: fmt
+#        run: terraform fmt 
+#
+#      - name: Terraform Init
+#        id: init
+#        run: terraform init
+      
+
