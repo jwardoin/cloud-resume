@@ -30,6 +30,7 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 - |In Progress| Integrate automated testing - I wrote a small smoke test using Cypress that passes if my API returns the proper values. Since I manually tested the code until I knew it was working and then  pushed it, I never *needed* to integrate the testing into my pipeline, but this would be especially useful for an application that will be updated with any regularity.
 
 - |Completed| <del>Semantic HTML & Responsive CSS - in its current state, the HTML and CSS are just code vomit - they work on desktop browsers and that is about it. Since viewing will likely occur on mobile devices, I think it is important that I update this as soon as possible.</del>
+  - rebuilt site with proper tags and DRY code. Used relative lengths to keep site elastic and media queries to keep site looking good on all devices
 
 - Caching - currently, the CloudFront distribution does not have caching setup properly for the application, so the visitor counter will continue updating with each refresh(and with testing too). I acknowledge that this is unideal and plan to figure out the best way to fix this ASAP.
 
