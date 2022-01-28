@@ -6,7 +6,20 @@ on:
     - 'Backend/**'
 
 jobs:
+
+## TODO: Integrate Cypress test into repo
+
+#  cypress-test:
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v2
+
+
   zip-and-s3-upload:
+  # needs: cypress-test # Cypress Test must pass before deploying new code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -14,12 +27,40 @@ jobs:
         run: |
           cd Backend
           zip lambda.zip lambda.py
+          : # hash="$(openssl dgst -binary -sha256 lambda.zip | openssl base64)" # Integrating Hashing for Lambda Code
       - uses: jakejarvis/s3-sync-action@v0.3.1
         with:
-          args: --acl public-read --follow-symlinks --delete --exclude 'lambda.py'
+          args: --acl public-read --follow-symlinks --delete --exclude 'lambda.py' # --metadata 'hash=$hash' # Integrating Hashing for Lambda Code
         env:
           AWS_REGION: 'us-east-1'
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_BACKEND }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: './Backend'
+
+## TODO: Get Terraform Cloud and original state file working with this repository
+
+#  terraform:
+#    needs: zip-and-s3-upload  
+#    runs-on: ubuntu-latest
+#    defaults:
+#      run: 
+#        working-directory: terraform
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#
+#      - name: Setup Terraform
+#        uses: hashicorp/setup-terraform@v1
+#        with:
+#          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+#
+#      - name: Terraform Format
+#        id: fmt
+#        run: terraform fmt 
+#
+#      - name: Terraform Init
+#        id: init
+#        run: terraform init
+      
+

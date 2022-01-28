@@ -26,6 +26,12 @@ data "aws_region" "current" {}
 
 data "aws_caller_identity" "current" {}
 
+# data "aws_s3_bucket_object" "package" { # TODO: Integrate Hashing for Lambda Code
+#   bucket = "crcterraformtestjwa"
+#   key    = "lambda.zip"
+}
+
+
 # DyanmoDB Table
 
 resource "aws_dynamodb_table" "crc_ddb" {
@@ -101,6 +107,7 @@ resource "aws_lambda_function" "crc_lambda" {
   role          = aws_iam_role.CRC_Lambda_IAM.arn
   handler       = "lambda.lambda_handler"
   runtime       = "python3.9"
+#   source_code_hash = data.aws_s3_bucket_object.package.metadata.Hash # TODO: Integrate Hashing for Lambda Code
 }
 
 # API
