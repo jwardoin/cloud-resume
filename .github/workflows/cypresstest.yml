@@ -1,0 +1,19 @@
+name: Testing End to End Test
+
+on:  
+  push:
+    paths: 
+    - '.github/**'
+jobs:
+
+  cypress-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: Cypress
+          build: npm run build
+          start: npm start
