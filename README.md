@@ -25,18 +25,25 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 
 ## On the Roadmap
 
+### General
+
 - |In Progress| Using one GitHub Repository for the whole stack - The challenge called for two separate repos, but I think a single repo with more specifically tailored GitHub Actions would be easier to manage.
 
-- |In Progress| Integrate automated testing - I wrote a small smoke test using Cypress that passes if my API returns the proper values. Since I manually tested the code until I knew it was working and then  pushed it, I never *needed* to integrate the testing into my pipeline, but this would be especially useful for an application that will be updated with any regularity.
+### Frontend 
 
 - |Completed| <del>Semantic HTML & Responsive CSS - in its current state, the HTML and CSS are just code vomit - they work on desktop browsers and that is about it. Since viewing will likely occur on mobile devices, I think it is important that I update this as soon as possible.</del>
-  - rebuilt site with proper tags and DRY code. Used relative lengths to keep site elastic and media queries to keep site looking good on all devices
+  - rebuilt site with proper tags and DRY code. Used relative lengths to keep site elastic and media queries to keep site looking good on all devices  
 
 - Caching - currently, the CloudFront distribution does not have caching setup properly for the application, so the visitor counter will continue updating with each refresh(and with testing too). I acknowledge that this is unideal and plan to figure out the best way to fix this ASAP.
 
 - Infrastructure as Code for the frontend - If I was able to troubleshoot all of the issues and make Terraform work for my backend, I could certainly do it for my frontend. This would allow me to control all of my current infrastructure in one place and would work with a single repo as mentioned above.
-<hr>
 
+- Plan and build directory system to serve landing pages for tailored resumes - Since this challenge uses some skills for a variety of different potential job titles, I'd like to have multiple resumes for all of the different jobs titles I may apply for, easily accessible from \n*/jobtitle
+
+### Backend
+
+- |In Progress| Integrate automated testing - I wrote a small smoke test using Cypress that passes if my API returns the proper values. Since I manually tested the code until I knew it was working and then  pushed it, I never *needed* to integrate the testing into my pipeline, but this would be especially useful for an application that will be updated with any regularity.
+<hr>
 
 <!-- ## Final Thoughts
 
