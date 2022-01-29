@@ -29,6 +29,10 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 
 - |In Progress| Using one GitHub Repository for the whole stack - The challenge called for two separate repos, but I think a single repo with more specifically tailored GitHub Actions would be easier to manage.
 
+- Terraform - break infrastructure code into modules and take advantage of HCL variables
+
+- Observability & Monitoring - I'm only using CloudWatch to monitor and log API errors at the moment - in the future, I would like to broaden the scope of my monitoring and observability in a meaningful way
+
 ### Frontend 
 
 - |Completed| <del>Semantic HTML & Responsive CSS - in its current state, the HTML and CSS are just code vomit - they work on desktop browsers and that is about it. Since viewing will likely occur on mobile devices, I think it is important that I update this as soon as possible.</del>
