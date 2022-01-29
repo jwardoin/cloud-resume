@@ -42,7 +42,10 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 
 ### Backend
 
-- |In Progress| Integrate automated testing - I wrote a small smoke test using Cypress that passes if my API returns the proper values. Since I manually tested the code until I knew it was working and then  pushed it, I never *needed* to integrate the testing into my pipeline, but this would be especially useful for an application that will be updated with any regularity.
+- |Completed| <del>Integrate automated testing - I wrote a small smoke test using Cypress that passes if my API returns the proper values. Since I manually tested the code until I knew it was working and then  pushed it, I never *needed* to integrate the testing into my pipeline, but this would be especially useful for an application that will be updated with any regularity.</del>
+  - Cypress test now runs when backend code changes are pushed - backend code is only deployed to production if all test pass
+
+- Build more robust testing - my end-to-end test only checks that my Lambda function is returning status code 200 to the API; I would like for it to also test that the json body is returning the proper values - I would also like to add some way to test my code without using my production API
 <hr>
 
 <!-- ## Final Thoughts
