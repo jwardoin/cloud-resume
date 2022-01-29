@@ -1,4 +1,4 @@
-name: Zip and Upload Python Lambda code to S3
+name: Test, Zip, and Upload Python Lambda code to S3 - Terraform Apply Changes
 
 on:  
   push:
@@ -6,20 +6,17 @@ on:
     - 'Backend/**'
 
 jobs:
-
-## TODO: Integrate Cypress test into repo
-
-#  cypress-test:
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v2
-#       - name: Cypress run
-#         uses: cypress-io/github-action@v2
-
-
+  cypress-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: Cypress
   zip-and-s3-upload:
-  # needs: cypress-test # Cypress Test must pass before deploying new code
+    needs: cypress-test # Cypress Test must pass before deploying new code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
