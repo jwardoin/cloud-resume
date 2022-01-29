@@ -1,9 +1,7 @@
 name: Testing End to End Test
 
-on:  
-  push:
-    paths: 
-    - '.github/**'
+on: workflow_dispatch
+ 
 jobs:
 
   cypress-test:
