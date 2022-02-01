@@ -1,4 +1,3 @@
-
 async function visitorCounter() {
     const url = 'https://o88fs9koy5.execute-api.us-east-1.amazonaws.com/prod/WebsiteVisits';
     const counter = document.querySelector('#CounterVisitor');

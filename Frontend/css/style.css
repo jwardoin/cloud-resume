@@ -69,37 +69,47 @@ section, div {
     background: white;
 }
 
-div {
+.flex-resume {
     margin-top: 40px;
 }
 
-.flex {
+.flex-resume {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 .flex-1,
-.flex-2 {
-    margin: 0;
-}
+.flex-2,
+.flex-3 {
+    margin: 0; 
+} 
 
 .title {
+    align-items: flex-start;
     flex-basis: 100%;
-    order: 0;
+    order: -1;
     margin-top: 20px;
 }
 
-.flex-1 {
-    align-self: flex-start;
-    flex-basis: 60%;
-    
+.flex-1, .flex-3  {
+    flex-basis: 30%;
 }
 
 .flex-2 {
-    flex-basis: 30%;
+    flex: 5;
+    order: 1;
+    flex-basis: 70%;
 }
+
+.flex-3 {
+    flex: 5;
+    order: 2;
+    flex-basis: 10%;
+    
+}
+
 
 /*
   ========================================
@@ -138,34 +148,35 @@ a:visited {
 */
 
 
-@media screen and (max-width:750px) {
-
-    .flex {
-        flex-flow: row-reverse wrap;
-        justify-content: flex-end;
-        align-content: flex-end;
-    }
+@media screen and (max-width:649px) {
 
     .flex-1,
-    .flex-2 {
+    .flex-2,
+    .flex-3 {
         flex-basis:100%;
     }
 
     .flex-2 {
-        order: 0;
+        order: -1;
     }
+
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
-@media (max-width:1000px) and (min-width:751px) {
+@media (max-width:1000px) and (min-width:650px) {
     
-    .flex {
-        flex-flow: row-reverse wrap;
-        justify-content: flex-end;
-        align-content: flex-end;
+    .flex-resume {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
-    .flex-1 {
-        flex-basis: 70%;
+    .flex-2 {
+        flex-basis: 60%;
     }
 
 }
