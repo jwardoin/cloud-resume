@@ -13,7 +13,7 @@ I plan to migrate them both here and update the pipeline accordingly.
 
 ### Frontend
 
-**Tech used:** HTML, CSS, Javascript - AWS S3, Route53, CloudFront - Github Actions
+**Tech used:** HTML, CSS, JavaScript - AWS S3, Route53, CloudFront - Github Actions
 
 Built an HTML page with the content of my resume and styled it with CSS. These files were placed in a public AWS S3 bucket with static webhosting enabled. My domain was purchased and hosted using AWS Route53. Then, I created a CloudFront distribution, set the origin as my public S3 bucket, and pointed my domain to it with Route53. After building the backend, I wrote a small asynchronous function using Javascript that made a GET request to my backend and returned the needed values and set it to run on load within my HTML file. Once all of the pieces were in place, I pushed the completed poduct to GitHub. Finally, I setup a pipeline using GitHub Actions to update my static website files in the S3 bucket as I push new changes through to Git.
 
@@ -42,7 +42,7 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 
 - Infrastructure as Code for the frontend - If I was able to troubleshoot all of the issues and make Terraform work for my backend, I could certainly do it for my frontend. This would allow me to control all of my current infrastructure in one place and would work with a single repo as mentioned above.
 
-- Plan and build directory system to serve landing pages for tailored resumes - Since this challenge uses some skills for a variety of different potential job titles, I'd like to have multiple resumes for all of the different jobs titles I may apply for, easily accessible from \n*/jobtitle
+- Plan and build directory system to serve landing pages for tailored resumes - Since this challenge uses some skills for a variety of different potential job titles, I'd like to have multiple resumes for all of the different jobs titles I may apply for, easily accessible from myurl/jobtitle
 
 ### Backend
 
