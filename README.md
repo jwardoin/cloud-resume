@@ -38,9 +38,10 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 - |Completed| <del>Semantic HTML & Responsive CSS - in its current state, the HTML and CSS are just code vomit - they work on desktop browsers and that is about it. Since viewing will likely occur on mobile devices, I think it is important that I update this as soon as possible.</del>
   - rebuilt site with proper tags and DRY code. Used relative lengths to keep site elastic and media queries to keep site looking good on all devices  
 
-- Caching - currently, the CloudFront distribution does not have caching setup properly for the application, so the visitor counter will continue updating with each refresh(and with testing too). I acknowledge that this is unideal and plan to figure out the best way to fix this ASAP.
+- |Completed| <del>Caching - currently, the CloudFront distribution does not have caching setup properly for the application, so the visitor counter will continue updating with each refresh(and with testing too). I acknowledge that this is unideal and plan to figure out the best way to fix this ASAP.</del>
+  - implemented saving visitor count to localStorage
 
-- Infrastructure as Code for the frontend - If I was able to troubleshoot all of the issues and make Terraform work for my backend, I could certainly do it for my frontend. This would allow me to control all of my current infrastructure in one place and would work with a single repo as mentioned above.
+- Infrastructure as Code for the frontend - If I was able to troubleshoot all of the issues and make Terraform work for my backend, I could certainly do it for my frontend. This would allow me to control all of my current infrastructure in one place and would work well with a single repo as mentioned above.
 
 - Plan and build directory system to serve landing pages for tailored resumes - Since this challenge uses some skills for a variety of different potential job titles, I'd like to have multiple resumes for all of the different jobs titles I may apply for, easily accessible from myurl/jobtitle
 
