@@ -41,6 +41,8 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 - |Completed| <del>Caching - currently, the CloudFront distribution does not have caching setup properly for the application, so the visitor counter will continue updating with each refresh(and with testing too). I acknowledge that this is unideal and plan to figure out the best way to fix this ASAP.</del>
   - implemented saving visitor count to localStorage
 
+- |Completed| <del>Connect resume to my portfolio site</del>
+
 - Infrastructure as Code for the frontend - If I was able to troubleshoot all of the issues and make Terraform work for my backend, I could certainly do it for my frontend. This would allow me to control all of my current infrastructure in one place and would work well with a single repo as mentioned above.
 
 - Plan and build directory system to serve landing pages for tailored resumes - Since this challenge uses some skills for a variety of different potential job titles, I'd like to have multiple resumes for all of the different jobs titles I may apply for, easily accessible from myurl/jobtitle
@@ -53,9 +55,15 @@ Created a DynamoDB table to hold the visitor count. Then, using Python and the B
 - Build more robust testing - my end-to-end test only checks that my Lambda function is returning status code 200 to the API; I would like for it to also test that the json body is returning the proper values - I would also like to add some way to test my code without using my production API
 <hr>
 
-<!-- ## Final Thoughts
+## Final Thoughts
 
-TODO -->
+My understanding of how web applications work went from lots and lots of small pieces of information that didn't really fit together to larger chunks of working knowledge. This challenge truly helped me connect the pieces and grasp where each part of the stack begins and where it ends. 
 
-<!-- ## Examples:  -->
+## Examples:
+Take a look at these couple examples that I have in my own portfolio:
+
+**CodeWars:** https://github.com/jwardoin/code-wars-problems
+
+**MAA-Invoicer:** https://github.com/jwardoin/maa-invoicer
+
 
