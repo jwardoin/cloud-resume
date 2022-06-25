@@ -18,7 +18,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         SOURCE_DIR: './Frontend'
-        DEST_DIR: '/resume'
+        DEST_DIR: 'resume'
   cf-dist-invalidation:
     needs: s3-upload
     runs-on: ubuntu-latest
