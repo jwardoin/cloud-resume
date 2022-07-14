@@ -71,8 +71,11 @@ span {
 section, div {
     max-width: 960px;
     margin: 0 auto;
-    padding: 15px;
     background: white;
+}
+
+section {
+    padding:  15px;
 }
 
 .flex-resume {
@@ -80,6 +83,7 @@ section, div {
 }
 
 .flex-resume {
+    padding: 15px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -171,13 +175,29 @@ a.projectLink {
         flex-basis:100%;
     }
 
-    .flex-2 {
+    .flex-1 {
         order: -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 0;
     }
 
-    div {
+    .flex-1 > div {
+        margin-right: 1rem;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #certifications, #education {
+        display: none;
+    }
+
+    section, div {
         margin: 0;
-        padding: 0;
+        padding-bottom: .5rem;
     }
 
 }

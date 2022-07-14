@@ -10,7 +10,6 @@
 </head>
 
 <body onload="visitorCounter()">
-    <header></header>
     <div class="flex-resume">
         <section class="title">
             <h1>Jordan Ardoin</h1>
@@ -18,75 +17,93 @@
         </section>
         <section class="flex-1">
 
-            <h2>CONTACT</h2>
-            <ul>
-                <li>337.704.7085</li>
-                <!-- <li><a href="https://jordanardoin.com">jordanardoin.com</a></li> -->
-                <li><a href="mailto:jordanwardoin@gmail.com">jordan<wbr>w<wbr>ardoin@gmail.com</a></li>
-                <li><a href="https://www.github.com/jwardoin">github.com/jwardoin</a></li>
-                <li><a href="https://www.linkedin.com/in/jwardoin">linkedin.com/in/jwardoin</a></li>
-                <li><a href="https://www.twitter.com/jwardoin">@jwardoin</a></li>
-            </ul>
+            <div id="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li>337.704.7085</li>
+                    <!-- <li><a href="https://jordanardoin.com">jordanardoin.com</a></li> -->
+                    <li><a href="mailto:jordanwardoin@gmail.com">jordan<wbr>w<wbr>ardoin@gmail.com</a></li>
+                    <li><a href="https://www.github.com/jwardoin">github.com/jwardoin</a></li>
+                    <li><a href="https://www.linkedin.com/in/jwardoin">linkedin.com/in/jwardoin</a></li>
+                    <li><a href="https://www.twitter.com/jwardoin">@jwardoin</a></li>
+                </ul>
+            </div>
+            
+            <div id="skill-list">
+                <h2>SKILLS</h2>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>Node</li>
+                    <li>MongoDB</li>
+                    <li>AWS</li>
+                    <li>Git/GitHub</li>
+                    <li>Terraform</li>
+                    <li>GitHub Actions</li>
+                </ul>
+            </div>
 
-            <h2>SKILLS</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-                <li>AWS</li>
-                <li>Git/GitHub</li>
-                <li>IaC - Terraform</li>
-                <li>CI/CD - GitHub Actions</li>
-            </ul>
+            <div id="certifications">  
+                <h2>CERTIFICATIONS</h2>
+                <p>AWS Solutions Architect &ndash; Associate</p>
+            </div> 
 
-            <h2>CERTIFICATIONS</h2>
-            <p>AWS Solutions Architect &ndash; Associate</p>
+            <div id="education">
+                <h2>EDUCATION</h2>
+                <p class="school">UL LAFAYETTE</p>
+                <p class='date'>2011 &ndash; 2015</p>
+                <p>Major: Political Science</p>
+            </div>
 
-            <h2>EDUCATION</h2>
-            <p class="school">UL LAFAYETTE</p>
-            <p class='date'>2011 &ndash; 2015</p>
-            <p>Major: Political Science</p>
         </section>
 
         <section class="flex-2">
-            <h2>SUMMARY</h2>
-            <p>Passionate, self-starting software engineer with a deep interest in finding solutions for unique and compelling problems. Looking to bring my abilities to a tech company that will help take my skillset to the next level.</p>
-            <h2>PROJECTS</h2>
-            <a class="projectLink" href="https://github.com/jwardoin/maa-invoicer" target="_blank">
-                <h3>MAA Invoicer</h3>
-                <h4>Automated invoice generator using Google Calendar</h4>
-                <ul class="marked-list">
-                    <li>Utiltized Node.js and Express.js to request Google Calendar API data and store in MongoDB, persist access tokens for API calls, and send JSON data to frontend</li>
-                    <li>Set up a component-based, single page application using React.js to handle state changes as users navigate site</li>
-                </ul>
-            </a>    
+            <div id="summary">
+                <h2>SUMMARY</h2>
+                <p>Passionate, self-starting software engineer with a proven track record of creating meaningful solutions in a team environment. Looking to bring my abilities to a tech company that will help take my skillset to the next level.</p>
+            </div>
+            
+            <div id="projects">
+                <h2>PROJECTS</h2>
+                <a class="projectLink" href="https://github.com/jwardoin/maa-invoicer" target="_blank">
+                    <h3>MAA Invoicer</h3>
+                    <h4>Automated invoice generator using Google Calendar</h4>
+                    <ul class="marked-list">
+                        <li>Utiltized Node.js and Express.js to request Google Calendar API data and store in MongoDB, persist access tokens for API calls, and send JSON data to frontend</li>
+                        <li>Set up a component-based, single page application using React.js to handle state changes as users navigate site</li>
+                    </ul>
+                </a>
+              
 
-            <a class="projectLink" href="https://github.com/jwardoin/cloud-resume" target="_blank">
-                <h3>Cloud Resume Challenge</h3>
-                <h4><a href="https://resume.jordanardoin.com">Full stack application</a> hosting resume with AWS services and displaying total visitors</h4>
-                <ul class="marked-list">
-                        <li>Created the frontend using HTML, CSS, & Javascript, hosted the files using AWS S3, and served the files using AWS Route53 & CloudFront</li>
-                        <li>Employed a serverless architecture using AWS Lambda, API Gateway, & DynamoDB to keep track of visitors </li>
-                        <li>Defined the backend infrastucture using Terraform and continously deploy all assets using GitHub Actions</li>
-                </ul>
-                <p id="CounterVisitor"></p>
-            </a>
+                <a class="projectLink" href="https://github.com/jwardoin/cloud-resume" target="_blank">
+                    <h3>Cloud Resume Challenge</h3>
+                    <h4><a href="https://resume.jordanardoin.com">Full stack application</a> hosting resume with AWS services and displaying total visitors</h4>
+                    <ul class="marked-list">
+                            <li>Created the frontend using HTML, CSS, & Javascript, hosted the files using AWS S3, and served the files using AWS Route53 & CloudFront</li>
+                            <li>Employed a serverless architecture using AWS Lambda, API Gateway, & DynamoDB to keep track of visitors </li>
+                            <li>Defined the backend infrastucture using Terraform and continously deploy all assets using GitHub Actions</li>
+                    </ul>
+                    <p id="CounterVisitor"></p>
+                </a>
+            </div>  
 
-            <h2>WORK EXPERIENCE</h2>
-            <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
-            <p class='date'>September 2015 &ndash; Present</p>
-            <li>Through professional and business skillsets, enabled artists and organizations to meet objectives, produce satisfactory products, and maintain growth</li>
-            <h3>Instructor at Music Academy of Acadiana | Lafayette, LA</h3>
-            <p class='date'>August 2017 &ndash; Present</p>
-            <li>Mentored people of all ages and from a variety of backgrounds, helping them develop a strong understanding of the complex, abstract ideas of music and musical performance</li>
-            <h3>Co-Owner at The Rayo Brothers | Lafayette, LA</h3>
-            <p class='date'>July 2013 &ndash; June 2022</p>
-            <li>One of four owners responsible for the growth and development of a small business. Collaborated with owners and other businesses to create products for positive end-user experiences</li>
+            <div id="work-experience">
+                <h2>WORK EXPERIENCE</h2>
+                <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
+                <p class='date'>September 2015 &ndash; Present</p>
+                <li>Through professional and business skillsets, enabled artists and organizations to meet objectives, produce satisfactory products, and maintain growth</li>
+                <h3>Instructor at Music Academy of Acadiana | Lafayette, LA</h3>
+                <p class='date'>August 2017 &ndash; Present</p>
+                <li>Mentored people of all ages and from a variety of backgrounds, helping them develop a strong understanding of the complex, abstract ideas of music and musical performance</li>
+                <h3>Co-Owner at The Rayo Brothers | Lafayette, LA</h3>
+                <p class='date'>July 2013 &ndash; June 2022</p>
+                <li>One of four owners responsible for the growth and development of a small business. Collaborated with owners and other businesses to create products for positive end-user experiences</li>
+            </div>
+
         </section>
     </div>  
     <script src="js/script.js"></script>
