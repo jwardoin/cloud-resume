@@ -206,21 +206,43 @@ a.projectLink {
 */
 
 @media screen and (max-width: 649px) {
+  h1 {
+    margin-bottom: .5rem;
+  }
+
   h2 {
     font-size: 2rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0;
+  }
+
+  section,
+  div {
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  li {
+    font-size: 1.3rem;
+  }
+
+
+  .flex-resume {
+    padding: 1rem;
+    margin: 0 auto;
   }
   
   .date {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  } 
+  .jobtitle {
+    font-size: 1.3rem;
   }
 
   .skills > ul  {
@@ -234,23 +256,23 @@ a.projectLink {
     justify-content: center;
   }
 
-  section,
-  div {
-    margin: 0;
-    padding-bottom: 0.5rem;
-  }
-  li {
-    font-size: 1.15rem;
-  }
-
   .underline-small {
     border: none;
   }
   
   .container {
     margin-bottom: .3rem;
-
   }
+
+  #work-experience .container-spread {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .container-spread {
+    margin-bottom: .5rem;
+  }
+  
 }
 
 @media (max-width: 1000px) and (min-width: 650px) {
@@ -267,7 +289,7 @@ a.projectLink {
   h3 {
     font-size: 1.5rem;
   }
-  .date {
+  .date{
     font-size: 1.2rem;
   }
    .horizontal-list {
