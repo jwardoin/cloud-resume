@@ -10,92 +10,98 @@
 
   <body onload="visitorCounter()">
     <div class="flex-resume">
-      <section class="title">
-        <h1>Jordan Ardoin</h1>
-        <span class="jobtitle">Software Engineer - Active Security Clearance: Top Secret</span>
-      </section>
-      <section class="flex-1">
-        <div id="contact">
-          <h2>CONTACT</h2>
-          <ul>
+      <section >
+        <div class="title">
+          <h1>Jordan Ardoin</h1>
+          <span class="jobtitle">Software Engineer - Active Security Clearance: Top Secret</span>
+        </div>
+          <ul class="horizontal-list">
             <li>337.831.0324</li>
+            <li> | </li>
             <li><a href="https://jordanardoin.com">jordanardoin.com</a></li>
+            <li> | </li>
             <li>
               <a href="mailto:jordanwardoin@gmail.com">jordan<wbr>w<wbr>ardoin@gmail.com</a>
             </li>
+            <li> | </li>
             <li>
               <a href="https://www.github.com/jwardoin">github.com/jwardoin</a>
             </li>
+            <li> | </li>
             <li>
               <a href="https://www.linkedin.com/in/jwardoin">linkedin.com/in/jwardoin</a>
             </li>
           </ul>
-        </div>
-
-        <!-- SWE Skills -->
-        <div id="skill-list">
-          <h2>SKILLS</h2>
-          <ul class="skills">
-            <li>Java</li>
-            <li>JavaScript/TypeScript</li>
-            <li>Python</li>
-            <li>Angular</li>
-            <li>HTML/CSS</li>
-            <li>NodeJS</li>
-            <li>PostgreSQL</li>
-            <li>Elasticsearch</li>
-            <li>Kafka</li>
-            <li>Docker</li>
-            <li>AWS</li>
-          </ul>
-        </div>
-
-
-        <!-- DevOps Skills -->
-        <!-- <div id="skill-list">
-          <h2>SKILLS</h2>
-          <ul class="skills">
-            <li>AWS</li>
-            <li>Docker</li>
-            <li>Python</li>
-            <li>Terraform</li>
-            <li>Ansible</li>
-            <li>Github Actions</li>
-            <li>Git</li>
-            <li>Bash</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-          </ul>
-        </div> -->
-
-        <div id="certifications">
-          <h2>CERTIFICATIONS</h2>
-          <p>AWS Solutions Architect – Associate (Expired 11/2024)</p>
-        </div>
-
-        <div id="education">
-          <h2>EDUCATION</h2>
-          <p class="school">WGU - BS Computer Science (AI Focus)</p>
-          <p class="date">Graduated August 2025</p>
-          <p class="school">UL LAFAYETTE - BA Political Science</p>
-          <p class="date">Graduated May 2015</p>
-        </div>
-      </section>
-
-      <section class="flex-2">
-        <!-- <div id="summary">
-          <h2>SUMMARY</h2>
-          <p>
-            Results-oriented Software Engineer with a proven track record of creating meaningful software solutions in a team environment. Adept at collaborating with cross-functional teams and clients to exceed project objectives. Eager to join a team where I can take ownership and have a strong impact on the product.
-          </p>
-        </div> -->
-
       
+      </section>
+      <section>
+        <!-- SWE Skills -->
+        <div id="skill-list" class="resume-section">
+          <div class="container">
+            <h2>SKILLS</h2>
+            <div class="underline"></div>
+          </div>
+          
+          <ul class="skills">
+            <ul>
+                <li class="innerTitle">Languages:</li>
+                <li>Java,</li>
+                <li>JavaScript/TypeScript,</li>
+                <li>Python</li>
+            </ul>
+            <ul>
+                <li class="innerTitle">Front-End Technologies:</li>
+                <li>Angular,</li>
+                <li>React,</li> 
+                <li>HTML,</li>
+                <li>CSS</li>
+            </ul>
+            <ul>
+                <li class="innerTitle">Back-End Technologies:</li>
+                <li>Spring Boot,</li>
+                <li>Node.js,</li>
+                <li>Express</li>
+            </ul>
+            <ul>
+                <li class="innerTitle">Database:</li>
+                <li>SQL: Postgres,</li>
+                <li>Oracle SQL;</li>
+                <li>NoSQL: MongoDB;</li>
+                <li>Redis</li>
+            </ul>
+            <ul>
+                <li class="innerTitle">Cloud & DevOps:</li>
+                <li>Docker,</li>
+                <li>AWS(S3, EC2, Lambda, DynamoDB, RDS, OpenShift),</li>
+                <li>Terraform</li>
+            </ul>
 
-        <div id="work-experience">
-          <h2>WORK EXPERIENCE</h2>
-          <h3>Software Engineer at CGI | Lafayette, LA</h3>
-          <p class="date">September 2022 – Present</p>
+            <ul>
+                <li class="innerTitle">Version Control:</li>
+                <li>Git,</li>
+                <li>GitHub,</li>
+                <li>GitLab,</li>
+                <li>Bitbucket</li>
+            </ul>
+            <ul>
+                <li class="innerTitle">Other:</li>
+                <li>Elasticsearch,</li>
+                <li>Kafka</li>
+            </ul>
+          </ul>
+        </div>
+      
+        <div id="work-experience" class="resume-section">
+          <div class="container">
+            <h2>EXPERIENCE</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="container-spread">
+            <h3>Software Engineer at CGI | Lafayette, LA</h3>
+            <div class="underline-small"></div>
+            <p class="date">September 2022 – Present</p>
+          </div>
+          
           <ul class="marked-list">
             <li>Contributed to the development of a stateless Java Spring Boot microservice within an idempotent, event-driven architecture, supporting high-throughput, fault-tolerant processing (11M+ daily queries) for mission-critical U.S. law-enforcement systems where downtime has direct public-safety implications.</li>
             <li>Delivered dynamic, end-to-end, full-stack features using Angular for interactive UI, Java Spring Boot for scalable back-end services, and Oracle SQL and Postgres for persistent data storage, enabling seamless user experiences across multiple client applications.</li>
@@ -106,43 +112,12 @@
             <li>Ensured stable, on-time releases by leading hotfix and sprint delivery processes, optimizing version control practices and reducing client-reported incidents.</li>
             <li>Collaborated with a functional team to gather requirements and actively participated in Agile/Scrum ceremonies to ensure alignment with client expectations and project goals.</li>
           </ul>
-
-          <!-- <h3>Consultant at CGI | Lafayette, LA</h3>
-          <h4>DevOps Engineer</h4>
-          <p class="date">March 2023 – Present</p>
-          <ul class="marked-list">
-            <li>
-              Conducted comprehensive gap analysis of company-wide DevOps practices, identifying and addressing ten significant shortcomings
-            </li>
-            <li>
-              Provided hands-on support to customers and developers, managing over a dozen microservices to ensure seamless operations
-            </li>
-            <li>
-              Extended a Python observability tool, resulting in a substantial improvement in issue resolution efficiency
-            </li>  
-            <li>
-              Played a pivotal role in achieving a remarkable 9.9 client satisfaction rating through consistent dedication to service excellence
-            </li>
-            </ul>
-            <h4>Java Engineer</h4>
-            <p class="date">September 2022 – March</p>
-            <ul class="marked-list">
-            <li>
-              Designed and developed enterprise software systems utilizing microservices architecture
-            </li>
-            <li>
-              Applied agile methodologies to work with project managers, business analysts, etc. to gather requirements and deliver high quality products that meet and exceed client needs and expectations
-            </li>
-            <li>
-              Created secure Java Spring Boot services and libraries
-            </li>
-            <li>
-              Designed and implemented custom Angular components for user-friendly interfaces
-            </li>
-          </ul> -->
-
-          <h3>Software Engineer at 100devs | Los Angeles, CA</h3>
-          <p class="date">December 2021 – September 2022</p>
+           <div class="container-spread">
+            <h3>Software Engineer at 100devs | Los Angeles, CA</h3>
+            <div class="underline-small"></div>
+            <p class="date">December 2021 – September 2022</p>
+           </div>
+         
           <ul class="marked-list">
             <li>
               Collaborated with a team of developers to produce modern,
@@ -155,9 +130,11 @@
             </li>
           </ul>
 
-
-          <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
-          <p class="date">September 2015 – Present</p>
+          <div class="container-spread">
+            <h3>Session Musician at Jordan Ardoin Music | Lafayette, LA</h3>
+            <div class="underline-small"></div>
+            <p class="date">September 2015 – Present</p>
+          </div>
           <ul class="marked-list">
             <li>
               Leveraged a unique blend of professional and business acumen to empower artists and organizations to achieve their goals and deliver satisfactory products, nurturing sustained growth while ensuring exceptional customer experiences.
@@ -166,15 +143,37 @@
               Mentored individuals of diverse ages and backgrounds, effectively conveying complex musical concepts and empowering them to realize personal musical aspirations.
             </li>
           </ul>
+        </div>
 
-          <!-- <h3>Co-Owner at The Rayo Brothers | Lafayette, LA</h3>
-          <p class="date">July 2013 – July 2022</p>
-          <ul class="marked-list">
-            <li>
-              One of four owners responsible for the growth and development of a small business. Collaborated with owners and other businesses to create products for positive end-user experiences
-            </li>
-          </ul> -->
-
+         <div id="education" class="resume-section">
+           <div class="container">
+            <h2>EDUCATION</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="container-spread">
+            <p class="school">WGU - BS Computer Science (AI Focus)</p>
+            <div class="underline-small"></div>
+            <p class="date">Graduated August 2025</p>
+          </div>
+          <div class="container-spread">
+            <p class="school">UL LAFAYETTE - BA Political Science</p>
+            <div class="underline-small"></div>
+            <p class="date">Graduated May 2015</p>
+          </div>
+          
+         
+        </div>
+        <div id="certifications" class="resume-section">
+           <div class="container">
+            <h2>CERTIFICATIONS</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="container-spread">
+            <p>AWS Solutions Architect - Associate</p>
+            <div class="underline-small"></div>
+            <p class="date">Nov 2021 - Nov 2024</p>
+          </div>
+          
         </div>
 
       </section>
