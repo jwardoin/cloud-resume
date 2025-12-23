@@ -83,30 +83,12 @@ section {
 
 .flex-resume {
   margin-top: 20px;
-}
-
-.flex-resume {
   padding: 5rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: row wrap;
-}
-
-.flex-1,
-.flex-2,
-.flex-3 {
-  margin: 0;
 }
 
 .title {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.flex-1,
-.flex-3 {
-  flex-basis: 30%;
 }
 
 .flex-2 {
@@ -160,7 +142,9 @@ section {
   Layer
   ========================================
 */
-
+p.school {
+  font-weight: bold;
+}
 .date,
 .jobtitle {
   color: rgba(30, 30, 200);
@@ -193,8 +177,8 @@ a.projectLink {
 
 .horizontal-list {
   display: flex;
-  align-self: center;
-  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .horizontal-list > li {
@@ -210,6 +194,11 @@ a.projectLink {
   margin-bottom: 1.5rem;
 }
 
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 /*
   ========================================
   Media Query
@@ -217,31 +206,32 @@ a.projectLink {
 */
 
 @media screen and (max-width: 649px) {
-  .flex-1,
-  .flex-2,
-  .flex-3 {
-    flex-basis: 100%;
+  h2 {
+    font-size: 2rem;
   }
 
-  .flex-1 {
-    order: -1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 0;
+  h3 {
+    font-size: 1.5rem;
   }
 
-  .flex-1 > div {
-    margin-right: 1rem;
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  
+  .date {
+    font-size: 1.2rem;
   }
 
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .skills > ul  {
+    display: flex;
+    flex-wrap: wrap
   }
 
-  #certifications,
-  #education {
-    display: none;
+  .horizontal-list {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
 
   section,
@@ -252,6 +242,15 @@ a.projectLink {
   li {
     font-size: 1.15rem;
   }
+
+  .underline-small {
+    border: none;
+  }
+  
+  .container {
+    margin-bottom: .3rem;
+
+  }
 }
 
 @media (max-width: 1000px) and (min-width: 650px) {
@@ -261,7 +260,31 @@ a.projectLink {
     align-items: flex-start;
   }
 
-  .flex-2 {
-    flex-basis: 60%;
+  h2 {
+    font-size: 1.5rem;
   }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+  .date {
+    font-size: 1.2rem;
+  }
+   .horizontal-list {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .horizontal-list > li {
+    font-size: 1.5rem;
+    margin: .5rem 1rem;
+  }
+  
+  .skills > ul > li.innerTitle {
+    font-size: 1.4rem;
+  }
+  .skills > ul > li {
+    font-size: 1.2rem;
+  }
+
 }
