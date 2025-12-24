@@ -36,7 +36,7 @@ h4 {
 
 h1 {
   font-size: 3.2rem;
-
+  margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -64,6 +64,10 @@ span {
   font-size: 1.3rem;
 }
 
+b {
+  font-weight: 600;
+}
+
 /*
   ========================================
   Layout
@@ -88,13 +92,7 @@ section {
 
 .title {
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-.flex-2 {
-  flex: 1;
-  order: -1;
-  flex-basis: 50%;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -119,7 +117,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width:100%
+  width: 100%
 }
 
 /*
@@ -145,16 +143,16 @@ section {
 p.school {
   font-weight: bold;
 }
+
 .date,
 .jobtitle {
-  color: rgba(30, 30, 200);
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
 
-.jobtitle{
-  margin-bottom: 1rem;
+.jobtitle {
+  margin-bottom: 0.5rem;
 }
 
 a:visited {
@@ -166,11 +164,11 @@ a.projectLink {
   text-decoration: none;
 }
 
-.skills > ul {
+.skills>ul {
   display: flex;
 }
 
-.skills > ul > li {
+.skills>ul>li {
   margin-bottom: .5rem;
   margin-left: .5rem;
 }
@@ -178,10 +176,10 @@ a.projectLink {
 .horizontal-list {
   display: flex;
   align-items: center;
-  
+
 }
 
-.horizontal-list > li {
+.horizontal-list>li {
   margin-left: 1rem;
 }
 
@@ -228,24 +226,25 @@ a.projectLink {
     margin: 0;
     padding-bottom: 0.5rem;
   }
+
   li {
     font-size: 1.3rem;
   }
-
 
   .flex-resume {
     padding: 1rem;
     margin: 0 auto;
   }
-  
+
   .date {
     font-size: 1.1rem;
-  } 
+  }
+
   .jobtitle {
     font-size: 1.3rem;
   }
 
-  .skills > ul  {
+  .skills>ul {
     display: flex;
     flex-wrap: wrap
   }
@@ -259,7 +258,7 @@ a.projectLink {
   .underline-small {
     border: none;
   }
-  
+
   .container {
     margin-bottom: .3rem;
   }
@@ -272,7 +271,7 @@ a.projectLink {
   .container-spread {
     margin-bottom: .5rem;
   }
-  
+
 }
 
 @media (max-width: 1000px) and (min-width: 650px) {
@@ -289,24 +288,47 @@ a.projectLink {
   h3 {
     font-size: 1.5rem;
   }
-  .date{
+
+  .date {
     font-size: 1.2rem;
   }
-   .horizontal-list {
+
+  .horizontal-list {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
   }
-  .horizontal-list > li {
+
+  .horizontal-list>li {
     font-size: 1.5rem;
     margin: .5rem 1rem;
   }
-  
-  .skills > ul > li.innerTitle {
+
+  .skills>ul>li.innerTitle {
     font-size: 1.4rem;
   }
-  .skills > ul > li {
+
+  .skills>ul>li {
     font-size: 1.2rem;
   }
 
+}
+
+@media print {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .flex-resume {
+    margin-top: 10px;
+    padding: 2.5rem;
+  }
+  .skills>ul>li {
+    font-size: 1.5rem;
+  }
+  .underline-small {
+    border: none;
+  }
 }
