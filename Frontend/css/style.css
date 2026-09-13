@@ -170,10 +170,11 @@ a.projectLink {
 
 .horizontal-list {
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  align-content : center;
 }
-
-.horizontal-list>li {
+.jobtitle.horizontal-list > li {
   margin-left: 1rem;
 }
 
